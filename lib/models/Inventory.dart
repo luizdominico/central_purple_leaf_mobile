@@ -1,4 +1,3 @@
-
 class Inventory {
   final String id;
   final String name;

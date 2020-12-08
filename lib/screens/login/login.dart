@@ -120,20 +120,6 @@ class _LoginState extends State<Login> {
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 8),
-              alignment: Alignment.center,
-              child: InkWell(
-                  child: Text(
-                      "Esqueceu sua senha?",
-                      style: TextStyle(
-                          color: Colors.white,
-                          decoration: TextDecoration.underline
-                      )
-                  ),
-                  onTap: () => {}
-              ),
-            ),
-            Container(
               child: RaisedButton(
                 onPressed: handleLogin,
                 child: Text(
@@ -148,6 +134,7 @@ class _LoginState extends State<Login> {
                 color: Colors.white,
                 padding: EdgeInsets.symmetric(horizontal: 148, vertical: 13),
               ),
+              margin: EdgeInsets.symmetric(vertical: 24),
             ),
             Spacer(),
             Container(

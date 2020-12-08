@@ -81,8 +81,6 @@ class _ProductState extends State<Product> {
               ],
             )
         );
-      } else {
-        print('here');
       }
     } else {
       showDialog(
