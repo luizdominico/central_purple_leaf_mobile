@@ -33,13 +33,15 @@ class _DashboardState extends State<Dashboard> {
     return SafeArea(
       child: DefaultTabController(
         length: 3,
-        child: Scaffold(
+        child: WillPopScope(
+          onWillPop: () async => false,
+          child: Scaffold(
             backgroundColor: Colors.white,
             appBar: AppBar(
-              title: _titles[_currentIndex],
-              backgroundColor: Colors.deepPurple,
-              leading: Container(),
-              centerTitle: true
+                title: _titles[_currentIndex],
+                backgroundColor: Colors.deepPurple,
+                leading: Container(),
+                centerTitle: true
             ),
             bottomNavigationBar: BottomNavigationBar(
               backgroundColor: Colors.deepPurple,
@@ -48,21 +50,22 @@ class _DashboardState extends State<Dashboard> {
               currentIndex: _currentIndex,
               items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_bag_outlined),
-                  label: 'Catálogo'
+                    icon: Icon(Icons.shopping_bag_outlined),
+                    label: 'Catálogo'
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.check_box_outline_blank),
-                  label: 'Inventário'
+                    icon: Icon(Icons.check_box_outline_blank),
+                    label: 'Inventário'
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person_outline),
-                  label: 'Perfil'
+                    icon: Icon(Icons.person_outline),
+                    label: 'Perfil'
                 )
               ],
             ),
-          body: _screens[_currentIndex],
-        ),
+            body: _screens[_currentIndex],
+          )
+        )
       )
     );
   }

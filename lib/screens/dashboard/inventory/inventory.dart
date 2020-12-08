@@ -176,7 +176,9 @@ class _InventoryState extends State<Inventory> {
           }
       ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.pushNamed(context, "/product")
+          },
           backgroundColor: Colors.deepPurple,
           child: Icon(Icons.add),
         )
